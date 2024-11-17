@@ -1,17 +1,28 @@
+import Link from "next/link";
 
 export default function Projects() {
     return (
-        <div className='text-slate-300'>
-            <h1>Projects</h1>
+        <div className='flex flex-col space-y-5  text-white '>
+            <h1 className="text-xl font-semibold">Projects</h1>
             <ul className="space-y-5">
                 <li>
-                    <h2>Gambling Friends</h2>
-                    <p>A web-app designed to track poker statsitics and poker earnings (or losings).</p>
+                    <Link href="/projects" className="underline">Rate My Study Spot</Link>
+                    <p>An app to study spots around the UBC campus</p>
                 </li>
                 <li>
-                    <a>Sustainabite</a>
+                    <Link href="/projects" className="underline">Gambling Friends</Link>
+                    <p>Poker winning and losing tracker</p>
                 </li>
+                <li>
+                    <Link href="/projects" className="underline">Sustainabite</Link>
+                    <p>2023 Code the Change Hackathon Project</p>
+                </li>
+
             </ul>
+            <div>
+                <Link href="/projects" className="hover:text-neutral-200 relative hover:underline" >All Projects →</Link>
+            </div>
+
         </div>
     );
 }

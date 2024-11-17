@@ -1,7 +1,7 @@
 
 export default function Footer() {
     return (
-        <footer className="text-slate-300">
+        <footer className="text-white">
             <p>© 2024</p>
         </footer>
     )
