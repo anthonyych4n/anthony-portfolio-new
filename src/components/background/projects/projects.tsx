@@ -6,18 +6,17 @@ export default function Projects() {
             <h1 className="text-xl font-semibold">Projects</h1>
             <ul className="space-y-5">
                 <li>
-                    <Link href="/projects" className="underline">Rate My Study Spot</Link>
+                    <Link href="/projects/ratemystudyspot" className="underline">Rate My Study Spot</Link>
                     <p>An app to study spots around the UBC campus</p>
                 </li>
                 <li>
-                    <Link href="/projects" className="underline">Gambling Friends</Link>
+                    <Link href="/projects/gambling-friends" className="underline">Gambling Friends</Link>
                     <p>Poker winning and losing tracker</p>
                 </li>
                 <li>
-                    <Link href="/projects" className="underline">Sustainabite</Link>
+                    <Link href="/projects/sustainabite" className="underline">Sustainabite</Link>
                     <p>2023 Code the Change Hackathon Project</p>
                 </li>
-
             </ul>
             <div>
                 <Link href="/projects" className="hover:text-neutral-200 relative hover:underline" >All Projects →</Link>

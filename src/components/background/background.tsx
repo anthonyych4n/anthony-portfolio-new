@@ -1,12 +1,13 @@
+import Education from "./education/education";
+import Journey from "./journey/journey";
 import Projects from "./projects/projects";
-
 export default function Background() {
     return (
         <div className='flex flex-col max-w-md gap-y-16'>
             {<Projects />}
-            {/*<Education />}
+            {<Education />}
             {<Journey />}
-            {<Skills />*/}
+            {/*<Skills />*/}
         </div>
     );
 }
