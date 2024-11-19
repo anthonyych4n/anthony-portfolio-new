@@ -1,44 +1,66 @@
 import Image from 'next/image'
 
-type Job = {
+interface Job {
     title: string
     company: string
     period: string
     description: string
-    imageUrl: string
+    logoUrl: string
 }
 
-export default function Journey({ jobs = defaultJobs }: { jobs?: Job[] }) {
+const jobs: Job[] = [
+    {
+        title: "Software Engineer",
+        company: "Tech Innovators",
+        period: "2021 - Present",
+        description: "Leading development of cutting-edge web applications using React and Node.js.",
+        logoUrl: ""
+    },
+    {
+        title: "Frontend Developer",
+        company: "Creative Solutions",
+        period: "2019 - 2021",
+        description: "Designed and implemented responsive user interfaces for various client projects.",
+        logoUrl: ""
+    },
+    {
+        title: "Junior Developer",
+        company: "Startup Ventures",
+        period: "2017 - 2019",
+        description: "Contributed to the development of mobile apps and gained experience in agile methodologies.",
+        logoUrl: ""
+    }
+]
+
+export default function Journey() {
     return (
         <div className=" text-white min-h-screen ">
-            <h1 className=" font-bold mb-8 ">My Professional Journey</h1>
-            <div className="relative max-w-2xl mx-auto">
-                <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-white" />
+            <h1 className="text-3xl font-bold mb-8">My Journey</h1>
+            <div className="relative">
                 {jobs.map((job, index) => (
-                    <div key={index} className={`mb-8 flex ${index % 2 === 0 ? 'flex-row-reverse' : 'flex-row'}`}>
-                        <div className="w-1/2" />
-                        <div className="w-6 h-6 absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center">
-                            <div className="w-6 h-6 bg-white rounded-full z-10" />
-                            {index !== jobs.length - 1 && (
-                                <div className="h-full w-1 bg-white absolute top-6" />
-                            )}
+                    <div key={index} className="mb-8 flex">
+                        <div className="flex flex-col items-center mr-4">
+                            <div className={`w-4 h-4 bg-white rounded-full ${index === 0 ? 'mt-5' : ''} ${index === jobs.length - 1 ? 'mb-5' : ''}`}></div>
+                            {index < jobs.length - 1 && <div className="w-0.5 bg-white flex-grow"></div>}
                         </div>
-                        <div className="w-1/2 p-4">
-                            <div className=" rounded-lg p-6 relative">
-                                <div className="absolute top-4 right-4 w-16 h-16 rounded-full overflow-hidden">
+                        <div className="flex-grow pt-1">
+                            <div className="flex justify-between items-start mb-2">
+                                <div>
+                                    <h2 className="text-xl font-semibold">{job.title}</h2>
+                                    <h3 className="text-lg text-gray-300">{job.company}</h3>
+                                    <p className="text-sm text-gray-400">{job.period}</p>
+                                </div>
+                                <div className="ml-4 flex-shrink-0">
                                     <Image
-                                        src={job.imageUrl}
+                                        src={job.logoUrl}
                                         alt={`${job.company} logo`}
-                                        width={64}
-                                        height={64}
-                                        className="object-cover"
+                                        width={50}
+                                        height={50}
+                                        className="rounded-full bg-white"
                                     />
                                 </div>
-                                <h2 className="text-xl font-semibold mb-2">{job.title}</h2>
-                                <h3 className="text-lg text-gray-300 mb-1">{job.company}</h3>
-                                <p className="text-sm text-gray-400 mb-4">{job.period}</p>
-                                <p className="text-gray-300">{job.description}</p>
                             </div>
+                            <p className="text-gray-300">{job.description}</p>
                         </div>
                     </div>
                 ))}
@@ -46,27 +68,3 @@ export default function Journey({ jobs = defaultJobs }: { jobs?: Job[] }) {
         </div>
     )
 }
-
-const defaultJobs: Job[] = [
-    {
-        title: "Senior Developer",
-        company: "Tech Innovators Inc.",
-        period: "2020 - Present",
-        description: "Leading development teams in creating cutting-edge web applications using React and Node.js. Implementing microservices architecture and mentoring junior developers.",
-        imageUrl: ""
-    },
-    {
-        title: "Full Stack Developer",
-        company: "Digital Solutions Ltd.",
-        period: "2017 - 2020",
-        description: "Developed and maintained various client projects using Angular and Django frameworks. Implemented CI/CD pipelines and improved overall code quality and test coverage.",
-        imageUrl: ""
-    },
-    {
-        title: "Junior Developer",
-        company: "StartUp Ventures",
-        period: "2015 - 2017",
-        description: "Assisted in the development of mobile applications using React Native and Firebase. Gained experience in agile methodologies and version control systems.",
-        imageUrl: ""
-    }
-]
