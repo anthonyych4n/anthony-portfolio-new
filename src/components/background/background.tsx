@@ -1,3 +1,4 @@
+import Footer from "../footer";
 import Education from "./education/education";
 import Journey from "./journey/journey";
 import Projects from "./projects/projects";
@@ -7,7 +8,9 @@ export default function Background() {
             {<Projects />}
             {<Education />}
             {<Journey />}
+            {<Footer />}
             {/*<Skills />*/}
+
         </div>
     );
 }
