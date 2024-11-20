@@ -24,7 +24,7 @@ export default function Animation() {
                     <Image
                         src={Capybara[0].imageUrl}
                         alt="Capybara"
-                        width={350}
+                        width={370}
                         height={350}
                         className="rounded-lg hover:scale-110 transition ease-in-out duration-200"
                     />

@@ -30,15 +30,21 @@ export default function Home() {
   if (loading) {
     return (
       <div className='flex justify-center items-center min-h-screen bg-neutral-900 space-x-5'>
-        <div className='h-8 w-8 bg-white rounded-full animate-bounce [animation-delay:-0.3s]'></div>
+        {/*<div className='h-8 w-8 bg-white rounded-full animate-bounce [animation-delay:-0.3s]'></div>
         <div className='h-8 w-8 bg-white rounded-full animate-bounce [animation-delay:-0.15s] '></div>
-        <div className='h-8 w-8 bg-white rounded-full animate-bounce'></div>
+        <div className='h-8 w-8 bg-white rounded-full animate-bounce'></div>*/}
+        <svg className='animate-spin h-20 w-20 rounded-full' viewBox='0 0 800 800'>
+          <circle cx="400" cy="400" fill="none"
+            r="375" strokeWidth="50" stroke="#ffffff"
+            strokeDasharray="1200 1400"
+            strokeLinecap="round" /></svg>
       </div>
     );
   }
 
   return (
     <div className='flex justify-center min-h-screen bg-neutral-900'>
+
       <div className='w-full max-w-7xl flex relative'>
         <div className='fixed ml-[200px] w-[500px] pt-40'>
           <About />
