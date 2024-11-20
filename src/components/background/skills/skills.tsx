@@ -3,6 +3,7 @@ export default function Skills() {
 
     const languages = ["Python", "Java", "C/C++", "HTML", "CSS", "JavaScript", "Typescript", "SQL", "MongoDB"];
     const frameworks = ["Git", "GitHub", "React", "Next.js", "Tailwind CSS", "Node.js", "AWS Amplify Gen 2", "Figma", "Framer Motion"];
+
     return (
         <div className="text-white flex flex-col space-y-5">
             <h1>Skills</h1>
