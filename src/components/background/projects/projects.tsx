@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function Projects() {
     return (
-        <div className='flex flex-col space-y-5  text-white '>
-            <h1 className="text-xl font-semibold">Projects</h1>
+        <div className='text-white flex flex-col space-y-5'>
+            <h1 className="">Projects</h1>
             <ul className="space-y-5">
                 <li>
                     <Link href="/projects/ratemystudyspot" className="underline">Rate My Study Spot</Link>
