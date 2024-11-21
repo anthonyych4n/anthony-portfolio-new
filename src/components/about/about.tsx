@@ -18,7 +18,7 @@ export default function About() {
                 In my free time, I enjoy creating web applications and learning new technologies,
                 playing volleyball, hiking, and working out.
             </p>
-            <a href="" className='underline'>More about me</a>
+            <a href="/more-about-me" className='underline'>More about me</a>
             <div className='flex flex-row space-x-2'>
                 {contactLinks.map((link, index) => (
                     <a key={index} href={link.href} download={link.download || undefined}>
