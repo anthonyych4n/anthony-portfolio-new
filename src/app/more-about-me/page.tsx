@@ -26,7 +26,7 @@ export default function About() {
     const images = [
         { src: "/images/hiking.png", alt: "Hiking", width: 500, height: 500 },
         { src: "/images/me.png", alt: "me", width: 500, height: 500 },
-        { src: "/images/myself.jpg", alt: "Myself", width: 500, height: 500 },
+        { src: "/images/myself.png", alt: "Myself", width: 500, height: 500 },
 
     ];
 
