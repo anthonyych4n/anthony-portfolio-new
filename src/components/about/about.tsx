@@ -6,7 +6,7 @@ export default function About() {
         { href: "mailto:anthonyych4n@gmail.com", icon: <CiMail className='size-6 text-white hover:text-neutral-200' /> },
         { href: "https://www.linkedin.com/in/anthonyych4n/", icon: <CiLinkedin className='size-6 text-white hover:text-neutral-200' /> },
         { href: "https://github.com/anthonyych4n", icon: <IoLogoGithub className='size-6 text-white hover:text-neutral-200' /> },
-        { href: "resume2025.docx", icon: <IoIosPaper className='size-6 text-white hover:text-neutral-200' />, download: "Resume101.pdf" }
+        { href: "resume2025.docx", icon: <IoIosPaper className='size-6 text-white hover:text-neutral-200' />, download: "resume2025.docx" }
     ];
 
     return (
