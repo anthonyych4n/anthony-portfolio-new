@@ -10,13 +10,17 @@ const BackButton: React.FC = () => {
     };
 
     return (
-        <button onClick={handleBackClick} aria-label="back" className="p-2 rounded-full hover:bg-neutral-800">
+        <button 
+            onClick={handleBackClick} 
+            aria-label="back" 
+            className="p-2 rounded-lg text-neutral-400 hover:text-white hover:bg-neutral-800 transition-all duration-200"
+        >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-                className="w-6 h-6"
+                className="w-5 h-5"
             >
                 <path
                     strokeLinecap="round"
