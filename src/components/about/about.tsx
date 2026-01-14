@@ -19,9 +19,9 @@ export default function About() {
       label: "GitHub"
     },
     {
-      href: "resume2025summer.pdf",
+      href: "resume2025dec.pdf",
       icon: <IoIosPaper className="size-5" />,
-      download: "resume2025.pdf",
+      download: "AnthonyResume.pdf",
       label: "Resume"
     },
   ];
