@@ -23,44 +23,43 @@ const jobs: Job[] = [
         description: "Designed and developed a mobile application using React Native, improving user experience and engagement.",
         logoUrl: "/images/stealth.png"
     }
-].reverse()
+]
 
 export default function Journey() {
     return (
-        <div className='text-white space-y-5'>
-            <h1 className="">
-                My Journey
-            </h1>
-            <div className="relative">
+        <section>
+            <h2 className='text-sm font-medium text-neutral-400 uppercase tracking-wider mb-6'>
+                Experience
+            </h2>
+            <div className="space-y-2">
                 {jobs.map((job, index) => (
-                    <div key={index} className="mb-8 flex">
-                        <div className="flex-none w-12 relative">
-                            <div className="h-full w-0.5 bg-white absolute left-1/2 transform -translate-x-1/2"></div>
-                            <div className="h-4 w-4 rounded-full bg-white border-4  absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"></div>
-                        </div>
-                        <div className="flex-grow pl-4">
-                            <div className="flex justify-between items-start mb-2">
-                                <div>
-                                    <h2 className="font-semibold">{job.title}</h2>
-                                    <h3 className="text-md">{job.company}</h3>
-                                    <p className="text-sm ">{job.period}</p>
+                    <div 
+                        key={index} 
+                        className="group p-4 -mx-4 rounded-lg hover:bg-neutral-800/40 transition-all duration-200"
+                    >
+                        <div className="flex justify-between items-start gap-4">
+                            <div className="flex-1 min-w-0">
+                                <div className="flex items-center gap-3 mb-1">
+                                    <h3 className="text-white font-medium">{job.title}</h3>
+                                    <span className="text-neutral-500 text-xs">·</span>
+                                    <span className="text-neutral-400 text-sm">{job.company}</span>
                                 </div>
-                                <div className="flex-shrink-0 ml-4">
-                                    <Image
-                                        src={job.logoUrl}
-                                        alt={`${job.company} logo`}
-                                        width={40}
-                                        height={40}
-                                        className="rounded-lg hover:scale-125 transition ease-in-out duration-200"
-                                    />
-                                </div>
+                                <p className="text-neutral-500 text-xs mb-2">{job.period}</p>
+                                <p className="text-neutral-400 text-sm leading-relaxed">{job.description}</p>
                             </div>
-                            <p className="">{job.description}</p>
+                            <div className="flex-shrink-0">
+                                <Image
+                                    src={job.logoUrl}
+                                    alt={`${job.company} logo`}
+                                    width={36}
+                                    height={36}
+                                    className="rounded-lg opacity-70 group-hover:opacity-100 transition-opacity duration-200"
+                                />
+                            </div>
                         </div>
                     </div>
                 ))}
             </div>
-
-        </div>
+        </section>
     )
 }

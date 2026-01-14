@@ -1,8 +1,9 @@
-
 export default function Footer() {
     return (
-        <footer className="text-white p-10 ml-16">
-            <p>Created by Anthony Chan © 2024</p>
+        <footer className="pt-8 pb-12 border-t border-neutral-800/50">
+            <p className="text-neutral-500 text-sm">
+                © {new Date().getFullYear()} Anthony Chan
+            </p>
         </footer>
     )
 }

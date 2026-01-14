@@ -1,24 +1,31 @@
-export default function Education() {
-    const education = [
-        {
-            school: "University of Calgary",
-            degree: "Bachelors of Science in Computer Science",
-            graduation: "Expected Graduation 2027"
-        }
-    ];
+const education = [
+    {
+        school: "University of Calgary",
+        degree: "Bachelors of Science in Computer Science",
+        graduation: "Expected Graduation 2027"
+    }
+];
 
+export default function Education() {
     return (
-        <div className="flex flex-col space-y-5 text-white">
-            <h1>Education</h1>
-            {education.map((edu, index) => (
-                <div key={index} className="flex flex-col gap-2">
-                    <h2 className="text-lg">{edu.school}</h2>
-                    <p className="italic">{edu.degree}</p>
-                    <div className="flex">
-                        <span className="bg-neutral-800 px-3 py-1 rounded-full text-sm hover:duration-200 hover:scale-125 hover:bg-neutral-600 transition ease-in-out">{edu.graduation}</span>
+        <section>
+            <h2 className='text-sm font-medium text-neutral-400 uppercase tracking-wider mb-6'>
+                Education
+            </h2>
+            <div className="space-y-4">
+                {education.map((edu, index) => (
+                    <div 
+                        key={index} 
+                        className="p-4 -mx-4 rounded-lg hover:bg-neutral-800/40 transition-all duration-200"
+                    >
+                        <h3 className="text-white font-medium">{edu.school}</h3>
+                        <p className="text-neutral-400 text-sm mt-1">{edu.degree}</p>
+                        <span className="inline-block mt-3 bg-neutral-800/80 text-neutral-300 px-3 py-1 rounded-full text-xs font-medium">
+                            {edu.graduation}
+                        </span>
                     </div>
-                </div>
-            ))}
-        </div>
+                ))}
+            </div>
+        </section>
     );
 }
